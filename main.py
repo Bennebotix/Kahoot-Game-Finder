@@ -10,5 +10,4 @@ while True:
     code += random.choice(digits)
   result = is_code_valid(code)
   if result.status_code == 200:
-    with open("index.html", "a") as file:
-      file.writelines(code + "\n")
+    alert(code)
