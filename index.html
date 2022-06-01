@@ -6,13 +6,12 @@
   <body>
     <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-    <py-script>
-import requests
+request = require('request');
 import random
 digits = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 def is_code_valid(code):
-  request = requests.get("https://kahoot.it/reserve/session/" + code)
-  return request
+  kahootpined = requests.get("https://kahoot.it/reserve/session/" + code)
+  return kahootpined
 while True:
   code = ""
   for i in range(7):
